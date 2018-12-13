@@ -1,0 +1,49 @@
+/* Universal Styles */
+/* Mobile-first layout */
+
+html {
+  font-family: 'Slabo 27px', serif;
+  /* font-size: 15px; */
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(209, 176, 54, 0.36);
+}
+
+h1 {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 2.28rem;
+  color: #fff;
+  text-align: center;
+  background-color: #d16735;
+  padding: 1.3rem 0;
+  margin: 0;
+}
+
+.Footer {
+  position: sticky;
+  top: 100%;
+  width: 100%;
+  color: #fdf1e9;
+  text-align: center;
+  letter-spacing: .5px;
+  background-color: rgb(67, 60, 52);
+}
+
+/* Media Query Styles */
+/* @media only screen and (min-width: 560px) {
+  html {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+} */
