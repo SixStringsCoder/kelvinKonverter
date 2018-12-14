@@ -5,20 +5,15 @@ import './TemperatureBar.css';
 // TemperatureBar receives convertTemp method for onChange handler to set state of Kelvin
 // and props for onClick event
 class TemperatureBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      k_number: null
-    }
-    this.handleInputEvent = this.handleInputEvent.bind(this);
-    this.convert = this.convert.bind(this);
+  state = {
+    k_number: null
   }
 
-  convert() {
+  convert = () => {
     this.props.convert(this.state.k_number);
   }
 
-  handleInputEvent(event) {
+  handleInputEvent = (event) => {
       this.setState({
         k_number: event.target.value
       });
@@ -27,9 +22,8 @@ class TemperatureBar extends React.Component {
   render() {
     return (
       <section id="TempBar" className="TempBar">
-        <h3>Enter a Kelvin temperature.</h3>
-        <input type="text" placeholder="Right here, Buttercup!" onChange={this.handleInputEvent} />
-        <a onClick={this.convert} href="#TempBar">Konvert</a>
+        <input type="text" placeholder="Enter a Kelvin temperature." onChange={this.handleInputEvent} />
+        <button id="konvertBtn" onClick={this.convert}>Konvert</button>
       </section>
     );
   }

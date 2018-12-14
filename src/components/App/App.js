@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import TemperatureBar from '../TemperatureBar/TemperatureBar';
 import { ResultsArea } from '../ResultsArea/ResultsArea';
+import cold from '../ResultsArea/images/Antarctica_Olympics_desktop.jpg';
+import cool from '../ResultsArea/images/Willamette_Olympics_desktop.jpg';
+import warm from '../ResultsArea/images/cactusJuggling_Desktop.jpg';
+import hot from '../ResultsArea/images/Arabian_Olympics_desktop.jpg';
 
 class App extends React.Component {
 
@@ -20,30 +24,30 @@ class App extends React.Component {
     // Solve for Fahrenheit based on Celsius; round down with Math library
     const f = this.fahrenheit = Math.floor(c * (9/5) + 32);
     // Make the answer based on temperatures
-    this.answer = `The temperature is ${f}F or ${c}C.`;
+    this.answer = `${kelvin}°K = ${f}°F or ${c}°C`;
     // Alert if text input is empty and button is clicked
     if (kelvin === 'undefined' || kelvin === null) {
-        alert("I pity the fool who just clicks the button. Enter a number!");
+        alert("I pity the fool who just clicks the button. Enter a Kelvin temperature!");
         return false;
     }
     // Set the activity and corresponding pic based on temperatures
     if (f < 50) {
       this.activity = "Prepare for Antartic Winter olympics!";
-      this.picture = <img alt="Antarctica" src={require('../ResultsArea/images/Antarctica_Olympics_desktop.jpg')} />;
+      this.picture = <img alt="Antarctica" src={cold} />;
     } else if (f < 90) {
       this.activity = "Time to go kayaking on the Willamette!";
-      this.picture = <img alt="Willamette" src={require('../ResultsArea/images/Willamette_Olympics_desktop.jpg')} />;
-    } else if (f < 110) {
+      this.picture = <img alt="Willamette" src={cool} />;
+    } else if (f < 120) {
       this.activity = "Prepare for Las Vegan Summer Olympics Cactus Juggling Event!";
-      this.picture = <img alt="Cactus Juggling" src={require('../ResultsArea/images/cactusJuggling_Desktop.jpg')} />;
+      this.picture = <img alt="Cactus Juggling" src={warm} />;
     } else {
       this.activity = "Prepare for Saudi Arabian Summer Olympics Dirtboarding Event!";
-      this.picture = <img alt="Dirtboarding" src={require('../ResultsArea/images/Arabian_Olympics_desktop.jpg')} />;
+      this.picture = <img alt="Dirtboarding" src={hot} />;
     }
     // set state for these properties
     this.setState({
-      celsius: this.celsius,
-      fahrenheit: this.fahrenheit,
+      celsius: this.c,
+      fahrenheit: this.f,
       answer: this.answer,
       activity: this.activity,
       picture: this.picture

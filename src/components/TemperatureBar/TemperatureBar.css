@@ -1,13 +1,13 @@
 .TempBar {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-background-color: #ccc;
-background-image: url('./images/CKTherm_BGMobile.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ccc;
+  background-image: url('./images/CKTherm_BGMobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 12rem;
 }
 
 .TempBar h3 {
@@ -22,7 +22,7 @@ height: 20rem;
 
 
 .TempBar input {
-  width: 50vw;
+  width: 80vw;
   padding: .88rem 0;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -36,7 +36,8 @@ height: 20rem;
   outline: none;
 }
 
-.TempBar a {
+.TempBar button {
+  background: transparent;
   cursor: pointer;
   text-decoration: none;
   width: 8.11rem;
@@ -49,11 +50,16 @@ height: 20rem;
   transition: background-color .25s;
 }
 
-.TempBar a:hover {
+.TempBar button:hover {
   background-color: rgba(199, 100, 14, .8);
 }
 
-.TempBar a:active {
+.TempBar button:focus {
+  outline: none;
+}
+
+.TempBar button:active {
+  outline: none;
   background-color: rgba(230, 121, 26, .8);
 }
 

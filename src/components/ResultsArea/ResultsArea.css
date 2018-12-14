@@ -5,15 +5,15 @@
   justify-content: center;
   align-items: center;
   /* background-color: rgba(209, 176, 54, 0.36); */
-  padding: 25px 0 0 0;
+  padding: 15px 0 0 0;
   text-align: center;
   /* height: 100vh; */
   /*margin-bottom: 0;*/
 }
 
 .ResultsArea h3 {
-  width: 70%;
-  font-size: 1.9rem;
+  width: 90%;
+  font-size: 1.5rem;
   color: #D98E04;
   margin-top: 0;
   margin-bottom: 0;
@@ -23,7 +23,7 @@
 .ResultsArea p {
   font-size: 1.5rem;
   color: #AA1A11;
-  /* margin: 2rem; */
+  margin: 1rem;
 }
 
 .ResultsArea img {
