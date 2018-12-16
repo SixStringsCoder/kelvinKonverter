@@ -21,5 +21,5 @@ export const ResultsArea = ({answer, activity, pic}) => {
 ResultsArea.propTypes = {
   answer: PropTypes.string.isRequired,
 	activity: PropTypes.string.isRequired,
-  pic: PropTypes.string.isRequired
+  pic: PropTypes.object.isRequired
 }

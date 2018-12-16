@@ -20,7 +20,11 @@ class TemperatureBar extends Component {
     const { kelvin_temp } = this.state;
     return (
       <section id="TempBar" className="TempBar">
-        <input type="text" placeholder="Enter a Kelvin temperature." onChange={this.handleInputEvent} />
+
+        <input type="number"
+              placeholder="Enter a Kelvin temperature."
+              onChange={this.handleInputEvent}
+              autoFocus="true" />
         <button id="konvertBtn" onClick={() => this.props.convert(kelvin_temp)}>Konvert</button>
       </section>
     );

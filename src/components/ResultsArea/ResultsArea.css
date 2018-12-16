@@ -1,14 +1,11 @@
-/* Mobile-first - portrait or up to 350px*/
+/* Mobile-first - portrait or up to 559px*/
 .ResultsArea {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(209, 176, 54, 0.36); */
-  padding: 15px 0 0 0;
+  padding: 25px 0 0 0;
   text-align: center;
-  /* height: 100vh; */
-  /*margin-bottom: 0;*/
 }
 
 .ResultsArea h3 {
@@ -21,7 +18,8 @@
 }
 
 .ResultsArea p {
-  font-size: 1.5rem;
+  width: 70%;
+  font-size: 1.3rem;
   color: #AA1A11;
   margin: 1rem;
 }
@@ -33,44 +31,137 @@
   margin-bottom: 1rem;
 }
 
-/*.imageContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
-
-}*/
-
-/* @media only screen and (max-width: 560px){
+/* 560px SCREENS */
+@media only screen and (min-width: 560px){
   .ResultsArea {
     height: 66vh;
   }
 
   .ResultsArea h3 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
     margin: 1rem 1rem 0;
   }
 
   .ResultsArea p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   .ResultsArea img {
-    width: 63vw;
-
+    width: 70vw;
   }
 }
 
-@media only screen and (min-width: 350px){
+@media only screen and (min-width: 560px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 166vh;
+  }
+}
+
+
+/* 768px SCREENS */
+@media only screen and (min-width: 768px){
   .ResultsArea h3 {
     font-size: 2.3rem;
-    width: 100%;
-    text-align: center;
-    margin: 1rem 1rem 0;
   }
 
-} */
+  .ResultsArea p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 186vh;
+    padding: 15px 0 0 0;
+  }
+}
+
+/* 800px SCREENS */
+@media only screen and (min-width: 800px){
+  .ResultsArea {
+    height: 65vh;
+    justify-content: space-around;
+  }
+
+  .ResultsArea h3 {
+    font-size: 2.3rem;
+  }
+
+  .ResultsArea p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 165vh;
+  }
+
+  .ResultsArea p {
+    width: 60%;
+  }
+}
+
+
+/* 1024px SCREENS */
+@media only screen and (min-width: 1024px) {
+  .ResultsArea {
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .ResultsArea h3 {
+    font-size: 2.8rem;
+  }
+
+  .ResultsArea p {
+    font-size: 2.4rem;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 125vh;
+  }
+
+  .ResultsArea p {
+    width: 60%;
+  }
+}
+
+/* 1280px SCREENS */
+@media only screen and (min-width: 1280px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 145vh;
+  }
+
+  .ResultsArea p {
+    width: 60%;
+  }
+}
+
+/* 1350px SCREENS */
+@media only screen and (min-width: 1350px) and (orientation: landscape) {
+  .ResultsArea {
+    height: 75vh;
+    justify-content: center;
+    padding: 10px 0 15px 0;
+  }
+
+  .ResultsArea h3 {
+    font-size: 2.3rem;
+  }
+
+  .ResultsArea p {
+    font-size: 2rem;
+  }
+
+  .ResultsArea img {
+    width: 30vw;
+  }
+}

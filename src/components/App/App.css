@@ -37,13 +37,10 @@ h1 {
   background-color: rgb(67, 60, 52);
 }
 
-/* Media Query Styles */
-/* @media only screen and (min-width: 560px) {
-  html {
-    font-size: 18px;
-  }
 
+/* 1350px SCREENS */
+@media only screen and (min-width: 1350px) and (orientation: landscape) {
   h1 {
     font-size: 2.8rem;
   }
-} */
+}

@@ -7,7 +7,7 @@
   background-image: url('./images/CKTherm_BGMobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 12rem;
+  height: 10rem;
 }
 
 .TempBar h3 {
@@ -22,11 +22,11 @@
 
 
 .TempBar input {
-  width: 80vw;
-  padding: .88rem 0;
+  width: 70vw;
+  padding: .68rem 0;
   border: 1px solid #fff;
   border-radius: 3px;
-  /* margin-bottom: 2.22rem; */
+  cursor: pointer;
   color: #010c3f;
   text-align: center;
   font-size: 1rem;
@@ -63,20 +63,50 @@
   background-color: rgba(230, 121, 26, .8);
 }
 
-/* @media only screen and (min-width: 561px){
-  .TempBar {
-  background-image: url('./images/CKTherm_BGDesktop.jpg');
-  justify-content: center;
+@media only screen and (min-width: 560px) {
+  .TempBar input {
+    width: 38vw;
   }
+}
 
-  .TempBar h3 {
-    font-size: 2rem;
-    padding: 10px 22px;
+@media only screen and (min-width: 768px) {
+  .TempBar {
+    background-image: url('./images/CKTherm_BGDesktop.jpg');
+    justify-content: center;
   }
 
   .TempBar input {
-    width: 28vw;
-    margin-right: 0;
-    margin-bottom: 0;
+    font-size: 1.2rem;
+    padding: 0.58rem 0;
+    margin-bottom: 20px;
   }
-} */
+
+}
+
+/* 800px SCREENS */
+@media only screen and (min-width: 800px) and (max-width: 1280px) and (orientation: portrait){
+  .TempBar {
+    height: 14rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .TempBar {
+    height: 14rem;
+  }
+
+  .TempBar input {
+    width: 38vw;
+  }
+}
+
+/* 1350px SCREENS */
+@media only screen and (min-width: 1350px) {
+  .TempBar {
+    height: 12rem;
+  }
+
+  .TempBar input {
+    width: 18vw;
+  }
+}
