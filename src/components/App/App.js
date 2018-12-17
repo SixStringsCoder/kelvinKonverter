@@ -27,15 +27,15 @@ class App extends Component {
     let answer = `${kelvin}°K = ${fahrenheit}°F or ${celsius}°C`;
     // Alert if button is clicked but text input is empty
     if (kelvin === 'undefined' || kelvin === null) {
-        alert("I pity the fool who just clicks the button. Enter a Kelvin temperature!");
-        return false;
+      alert("I pity the fool who just clicks the button. Enter a Kelvin temperature!");
+      return false;
     }
 
     this.setState({
         celsius,
         fahrenheit,
         answer,
-      }, this.picActivtyResponse
+      }, this.picActivtyResponse()
     );
   }
 

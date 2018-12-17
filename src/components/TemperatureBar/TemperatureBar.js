@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './TemperatureBar.css';
 
 // TemperatureBar receives convertTemp method for onChange handler to set state of Kelvin
-// and props for onClick event
+// and props for button onClick event
 class TemperatureBar extends Component {
 
   state = {
@@ -18,6 +18,7 @@ class TemperatureBar extends Component {
 
   render() {
     const { kelvin_temp } = this.state;
+    const { convert } = this.props;
     return (
       <section id="TempBar" className="TempBar">
 
@@ -25,7 +26,7 @@ class TemperatureBar extends Component {
               placeholder="Enter a Kelvin temperature."
               onChange={this.handleInputEvent}
               autoFocus="true" />
-        <button id="konvertBtn" onClick={() => this.props.convert(kelvin_temp)}>Konvert</button>
+        <button id="konvertBtn" onClick={() => convert(kelvin_temp)}>Konvert</button>
       </section>
     );
   }
