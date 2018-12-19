@@ -35,7 +35,7 @@ class App extends Component {
         celsius,
         fahrenheit,
         answer,
-      }, this.picActivtyResponse()
+      }, this.picActivtyResponse
     );
   }
 
