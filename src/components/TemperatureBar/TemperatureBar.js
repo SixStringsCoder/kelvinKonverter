@@ -16,17 +16,22 @@ class TemperatureBar extends Component {
       });
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+  }
+
   render() {
     const { kelvin_temp } = this.state;
     const { convert } = this.props;
     return (
       <section id="TempBar" className="TempBar">
-
-        <input type="number"
-              placeholder="Enter a Kelvin temperature."
-              onChange={this.handleInputEvent}
-              autoFocus="true" />
-        <button id="konvertBtn" onClick={() => convert(kelvin_temp)}>Konvert</button>
+        <form onSubmit={this.handleSubmit}>
+          <input type="number"
+                placeholder="Enter a Kelvin temperature."
+                onChange={this.handleInputEvent}
+                autoFocus="true" />
+          <button id="konvertBtn" onClick={() => convert(kelvin_temp)}>Konvert</button>
+        </form>
       </section>
     );
   }
@@ -34,7 +39,8 @@ class TemperatureBar extends Component {
 
 TemperatureBar.PropTypes = {
   convert: PropTypes.func.isRequired,
-  handleInputEvent: PropTypes.func.isRequired
+  handleInputEvent: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 }
 
 export default TemperatureBar;
