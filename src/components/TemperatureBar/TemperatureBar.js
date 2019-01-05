@@ -24,13 +24,18 @@ class TemperatureBar extends Component {
     const { kelvin_temp } = this.state;
     const { convert } = this.props;
     return (
-      <section id="TempBar" className="TempBar">
+      <section id="TempBar" className="TempBar" aria-label="temperature-input-section" role="main">
         <form onSubmit={this.handleSubmit}>
+         <label htmlFor="temp-input" aria-label="temperature-input">
           <input type="number"
                 placeholder="Enter a Kelvin temperature."
                 onChange={this.handleInputEvent}
-                autoFocus="true" />
-          <button id="konvertBtn" onClick={() => convert(kelvin_temp)}>Konvert</button>
+                autoFocus="true"
+                id="temp-input" />
+          </label>
+          <label htmlFor="konvertBtn" aria-label="temperature-convert-button">
+            <button id="konvertBtn" onClick={() => convert(kelvin_temp)}>Konvert</button>
+          </label>
         </form>
       </section>
     );

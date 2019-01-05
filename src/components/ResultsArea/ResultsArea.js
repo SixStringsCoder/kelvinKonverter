@@ -4,12 +4,12 @@ import './ResultsArea.css';
 
 export const ResultsArea = ({answer, activity, pic}) => {
     return (
-      <section className="ResultsArea">
-        <h3 id="answer">{answer}</h3>
-        <p id="results">{activity}</p>
+      <section className="ResultsArea" aria-label="results-section" role="presentation">
+        <h3 id="answer" tabIndex="0">{answer}</h3>
+        <p id="results" tabIndex="0">{activity}</p>
         <div>{pic}</div>
       </section>
-    );
+    )
   }
 
 ResultsArea.propTypes = {

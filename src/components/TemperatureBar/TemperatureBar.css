@@ -40,8 +40,10 @@ form {
   font-size: 1rem;
 }
 
-.TempBar input:focus {
-  outline: none;
+input:focus,
+button:focus {
+  outline: 5px dotted white;
+  outline-offset: 5px;
 }
 
 .TempBar button {
@@ -56,18 +58,14 @@ form {
   text-align: center;
   font-size: 1.3rem;
   transition: background-color .25s;
+
 }
 
 .TempBar button:hover {
   background-color: rgba(199, 100, 14, .8);
 }
 
-.TempBar button:focus {
-  outline: none;
-}
-
 .TempBar button:active {
-  outline: none;
   background-color: rgba(230, 121, 26, .8);
 }
 

@@ -45,16 +45,16 @@ class App extends Component {
     // Set the activity and corresponding pic based on temperatures
     if (this.state.fahrenheit < 50) {
       activity = "Prepare for Antartic Winter Olympics!";
-      picture = <img alt="Antarctica" src={cold} />;
+      picture = <img tabIndex="0" src={cold} alt="person standing on snowy mountain" />;
     } else if (this.state.fahrenheit < 90) {
       activity = "Time to go kayaking on the Willamette!";
-      picture = <img alt="Willamette" src={cool} />;
+      picture = <img tabIndex="0" src={cool} alt="Front of a kayak on the Willamette River" />;
     } else if (this.state.fahrenheit < 120) {
       activity = "Prepare for Las Vegan Summer Olympics Cactus Juggling event!";
-      picture = <img alt="Cactus Juggling" src={warm} />;
+      picture = <img tabIndex="0" src={warm} alt="Man juggling cacti" />;
     } else {
       activity = "Prepare for Saudi Arabian Summer Olympics Dirtboarding event!";
-      picture = <img alt="Dirtboarding" src={hot} />;
+      picture = <img tabIndex="0" src={hot} alt="Two boys dirtboarding in the desert" />;
     }
 
     this.setState({
@@ -63,15 +63,12 @@ class App extends Component {
     });
   }
 
-// Pass states to other components
-// TemperatureBar needs to receive convertTemp method for onClick set up there
-// ResultsArea needs to receive states to set up props in its render area
   render() {
     const { fahrenheit, celsius, answer, activity, picture } = this.state;
     return (
       <main className="App">
-        <header className="NavBar">
-          <h1>Kelvin Konverter</h1>
+        <header tabIndex="0" className="NavBar" aria-label="site-name" role="banner">
+          <h1 tabIndex="0">Kelvin Konverter</h1>
         </header>
         <TemperatureBar convert={this.convertTemp} />
         <ResultsArea
@@ -81,8 +78,8 @@ class App extends Component {
           activity={activity}
           pic={picture}
         />
-        <footer className="Footer">
-          <h3>2018©️SteveHanlon</h3>
+        <footer className="Footer" role="contentinfo">
+          <h3>©️ copyright SteveHanlon 2018</h3>
         </footer>
       </main>
     );

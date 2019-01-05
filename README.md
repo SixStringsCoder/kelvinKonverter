@@ -34,6 +34,7 @@ This project was built using *Create React App*.  For complete technical details
 - Media queries used to build the *responsive design*.
 - JavaScript (ECMASript 6)
 - React 16.5.2
+- Accessibility-ready
 
 
 ##### Articles and Tutorials

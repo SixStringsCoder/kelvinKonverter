@@ -1,4 +1,9 @@
 /* Mobile-first - portrait or up to 559px*/
+
+:focus {
+  outline: 5px dotted black;
+}
+
 .ResultsArea {
   display: flex;
   flex-direction: column;
